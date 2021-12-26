@@ -63,7 +63,6 @@ const updateMiddleware = multer({
 fileRouter.get('/*', (req: Request<any, any, any, getFileQuery>, res: Response) => {
   const { '0': url } = req.params
   const { orderBy, orderByDirection, filterByName } = req.query
-  console.log(orderBy, orderByDirection, filterByName)
 
   try {
     const domain = './' + url
